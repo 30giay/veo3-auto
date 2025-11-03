@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Veo3 Text Batch Runner",
+  "version": "1.0.0",
+  "description": "Chạy prompt Veo3 hàng loạt trong Flow và hỗ trợ tải video.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [],
+  "host_permissions": [
+    "https://labs.google/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://labs.google/*"],
+      "js": ["batch-veo3.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
